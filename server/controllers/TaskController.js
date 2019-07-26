@@ -45,17 +45,7 @@ export default class TasksController {
       return res.status(201).send(data)
     } catch (error) { next(error) }
   }
-  // async edit(req, res, next) {
-  //   try {
-  //     let data = await TaskService.findOneAndUpdate({
-  //       _id: req.params.id, authorId: req.session.uid
-  //     }, req.body, { new: true })
-  //     if (data) {
-  //       return res.send(data)
-  //     }
-  //     throw new Error('Invalid ID')
-  //   } catch (error) { next(error) }
-  // }
+
   async delete(req, res, next) {
     try {
       await TaskService.findOneAndRemove({

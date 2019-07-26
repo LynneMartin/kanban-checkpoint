@@ -58,16 +58,6 @@ export default class BoardsController {
     } catch (error) { next(error) }
   }
 
-  // async edit(req, res, next) {
-  //   try {
-  //     let data = await _boardService.findOneAndUpdate({ _id: req.params.id, authorId: req.session.uid }, req.body, { new: true })
-  //     if (data) {
-  //       return res.send(data)
-  //     }
-  //     throw new Error("invalid id")
-  //   } catch (error) { next(error) }
-  // }
-
   async delete(req, res, next) {
     try {
       console.log('Entered delete board')

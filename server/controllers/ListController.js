@@ -55,16 +55,6 @@ export default class ListController {
     } catch (error) { next(error) }
   }
 
-  // async edit(req, res, next) {
-  //   try {
-  //     let data = await _listService.findOneAndUpdate({ _id: req.params.id, authorId: req.session.uid }, req.body, { new: true })  //REVIEW Change _listService to _repo?
-  //     if (data) {
-  //       return res.send(data)
-  //     }
-  //     throw new Error("invalid id")
-  //   } catch (error) { next(error) }
-  // }
-
   async delete(req, res, next) {
     try {
       let list = await _listService.findOneAndRemove({ _id: req.params.id, authorId: req.session.uid })  //REVIEW Change _listService to _repo?
