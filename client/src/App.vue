@@ -8,6 +8,7 @@
       </div>
       <router-view /> <!--REVIEW What does this do?-->
     </div>
+  </div>
 </template>
 
 <script>
@@ -19,13 +20,17 @@
 
 <style>
 
+
+
   #app {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    background-color: rgb(171, 236, 233); /* how to get 100% vh? */
+    background-color: rgb(203, 248, 233);
+    height: 2000px;
+    width: auto
     
   }
 

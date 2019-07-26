@@ -4,7 +4,7 @@
 
 <script>
 
-  // import Comments from './Comment'
+  // import Comments from './Comments'
   export default {
     name: 'Tasks',
       props: ['taskProp'],

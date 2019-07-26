@@ -10,7 +10,7 @@ export default class TasksController {
   constructor() {
     this.router = express.Router()
       // .get('', this.getAll)
-      .get('', this.getAllTasksByList)
+      .get('', this.getTasksByListId) //was getAllTasksByList
       .get('/:id', this.getById)
       .post('', this.create)
       .delete('/:id', this.delete)
@@ -21,7 +21,7 @@ export default class TasksController {
   defaultRoute(req, res, next) {
     next({ status: 404, message: 'Route not found' })
   }
-  async getAllTasksByList(req, res, next) {
+  async getTasksByListId(req, res, next) { //was getAllTasksByList
     try {
       //gets tasks by logged in user
       let data = await TaskService.find({

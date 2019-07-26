@@ -4,7 +4,7 @@
     <div>
       <button class="btn btn-sm btn-outline-danger mb-3" @click="logout">Logout</button>
     </div>
-    <b><h1>WELCOME TO THE BOARDS!!!</h1></b>
+    <b><h2>WELCOME TO YOUR KANBAN BOARDS!!!</h2></b>
     <p></p>
     <form @submit.prevent="addBoard">
       <input type="text" placeholder="title" v-model="newBoard.title" required>
@@ -28,6 +28,7 @@
   
   export default {
     name: "boards",
+    props: ['boardsProp'],
     mounted() {
       this.$store.dispatch("getBoards");
     },
@@ -46,6 +47,7 @@
     },
     methods: {
       addBoard() {
+        this.newBoard.authorId = this.$store.state.user._id;
         this.$store.dispatch("addBoard", this.newBoard);
         this.newBoard = { title: "", description: "" };
       },

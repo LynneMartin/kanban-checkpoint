@@ -13,7 +13,7 @@ export default class ListController {
       .get('/:id', this.getById)
       .get('/:id/tasks', this.getTaskByListId)
       .post('', this.create)
-      // .put('/:id', this.edit)
+      // .put('/:id', this.edit) ...not activating an edit option
       .delete('/:id', this.delete)
       .use(this.defaultRoute)
   }
